@@ -1,0 +1,10 @@
+c:\users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\bin\Debug\Lager System.exe.config
+c:\users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\obj\Debug\Lager System.csprojResolveAssemblyReference.cache
+c:\users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\obj\Debug\Lager_System.Properties.Resources.resources
+c:\users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\obj\Debug\Lager System.csproj.GenerateResource.Cache
+c:\users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\bin\Debug\Lager System.exe
+c:\users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\bin\Debug\Lager System.pdb
+c:\users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\obj\Debug\Lager System.exe
+c:\users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\obj\Debug\Lager System.pdb
+C:\Users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\obj\Debug\Lager_System.Connect.resources
+C:\Users\andr841a\documents\visual studio 2013\Projects\Lager System\Lager System\obj\Debug\Lager_System.mainMenu.resources
