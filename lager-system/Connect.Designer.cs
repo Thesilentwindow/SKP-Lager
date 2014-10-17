@@ -43,7 +43,7 @@
             this.button1.Location = new System.Drawing.Point(212, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 42);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Connect";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -72,7 +72,7 @@
             this.userNameBox.Location = new System.Drawing.Point(72, 12);
             this.userNameBox.Name = "userNameBox";
             this.userNameBox.Size = new System.Drawing.Size(124, 20);
-            this.userNameBox.TabIndex = 3;
+            this.userNameBox.TabIndex = 1;
             this.userNameBox.Text = "sa";
             this.userNameBox.TextChanged += new System.EventHandler(this.userNameBox_TextChanged);
             this.userNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userNameBox_KeyDown);
@@ -83,7 +83,7 @@
             this.passWordBox.Name = "passWordBox";
             this.passWordBox.PasswordChar = '*';
             this.passWordBox.Size = new System.Drawing.Size(124, 20);
-            this.passWordBox.TabIndex = 4;
+            this.passWordBox.TabIndex = 2;
             this.passWordBox.Text = "Andreas1212";
             this.passWordBox.TextChanged += new System.EventHandler(this.passWordBox_TextChanged);
             this.passWordBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passWordBox_KeyDown);
@@ -117,7 +117,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Connect";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Connect_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

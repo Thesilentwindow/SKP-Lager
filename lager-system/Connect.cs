@@ -9,62 +9,67 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Threading;
+using System.Configuration;
 
 namespace Lager_System
 {
     public partial class Connect : Form
     {
+        private string _Connstring = System.Configuration.ConfigurationManager.ConnectionStrings["lagerConn"].ToString();
+
         public Connect()
         {
             InitializeComponent();
         }
-       //#OVERRIDE Denne override slår Den røde kryds knap fra, det har vi gjort af den grund at når mainMenu formen bliver åbnet og man trykker på kryds knappen lukker det ikke hele processen med Connect.cs og mainMenu.cs.
-        private const int CP_NOCLOSE_BUTTON = 0x200;
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams myCp = base.CreateParams;
-                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
-                return myCp;
-            }
-        }
-       //#OVERRIDE
+
+        //private const int CP_NOCLOSE_BUTTON = 0x200; //#OVERRIDE Denne override slår Den røde kryds knap fra, det har vi gjort af den grund at når mainMenu formen bliver åbnet og man trykker på kryds knappen lukker det ikke hele processen med Connect.cs og mainMenu.cs.
+        //protected override CreateParams CreateParams
+        //{
+        //    get
+        //    {
+        //        CreateParams myCp = base.CreateParams;
+        //        myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+        //        return myCp;
+        //    }
+        //}
+
         
         // Denne "button" tilslutter os til vores Database
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            //backgroundWorker1.RunWorkerAsync();
-            //this.button1.Enabled = false;
             Con();
-            
         }
 
         public void Con()
         {
 
+            string userName = userNameBox.Text;
+            string passWord = passWordBox.Text;
+            var userID = userName;
+            var password = passWord;
             bool loginFail;
-            SqlConnection Conn = new SqlConnection("user id=" + userNameBox.Text + ";" +
-                                 "password=" + passWordBox.Text + ";server=LagerServer;" +
-                                 "Trusted_Connection=no;" +
-                                 "database=LagerDB; " +
-                                 "connection timeout=10");
 
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(ConfigurationManager.ConnectionStrings["lagerConn"].ConnectionString);
+
+            builder.UserID = userID;
+            builder.Password = password;
+
+            SqlConnection Conn = new SqlConnection(builder.ConnectionString);
 
             try
             {
                 Conn.Open();
-                Conn.Close();
                 loginFail = false;
-            }catch
+                Conn.Close();
+            }catch(SqlException ex)
             {
-                MessageBox.Show("Failed to login");
+                MessageBox.Show(ex.ToString());
                 loginFail = true;
             }
-            if(loginFail == false)
+            if(loginFail == false) //If login is successful it will change to the next form and hide the Connect form
             {
                 mainMenu secondForm = new mainMenu();
+                loginFail = false;
                 secondForm.Show();
                 this.Hide();
             

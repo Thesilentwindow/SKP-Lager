@@ -26,11 +26,20 @@ namespace Lager_System.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.72;Initial Catalog=LagerDB;Persist Security Info=True;User " +
-            "ID=sa;Password=Andreas1212")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.113;Initial Catalog=LagerDB;Persist Security Info=True;User" +
+            " ID=sa;Password=Andreas1212")]
         public string LagerDBConnectionString {
             get {
                 return ((string)(this["LagerDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        public string Setting {
+            get {
+                return ((string)(this["Setting"]));
             }
         }
     }
