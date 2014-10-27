@@ -22,16 +22,16 @@ namespace Lager_System
             InitializeComponent();
         }
 
-        private const int CP_NOCLOSE_BUTTON = 0x200; //#OVERRIDE Denne override slår Den røde kryds knap fra, det har vi gjort af den grund at når mainMenu formen bliver åbnet og man trykker på kryds knappen lukker det ikke hele processen med Connect.cs og mainMenu.cs.
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams myCp = base.CreateParams;
-                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
-                return myCp;
-            }
-        }
+        //private const int CP_NOCLOSE_BUTTON = 0x200; //#OVERRIDE Denne override slår Den røde kryds knap fra, det har vi gjort af den grund at når mainMenu formen bliver åbnet og man trykker på kryds knappen lukker det ikke hele processen med Connect.cs og mainMenu.cs.
+        //protected override CreateParams CreateParams
+        //{
+        //    get
+        //    {
+        //        CreateParams myCp = base.CreateParams;
+        //        myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+        //        return myCp;
+        //    }
+        //}
 
         
         // Denne "button" tilslutter os til vores Database
